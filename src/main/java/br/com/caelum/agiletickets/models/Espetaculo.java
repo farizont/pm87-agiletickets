@@ -16,6 +16,8 @@ import javax.persistence.OneToMany;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 
+
+
 @Entity
 public class Espetaculo {
 
@@ -98,8 +100,9 @@ public class Espetaculo {
      */
 	public List<Sessao> criaSessoes(LocalDate inicio, LocalDate fim, LocalTime horario, Periodicidade periodicidade) {
 		// ALUNO: Não apague esse metodo. Esse sim será usado no futuro! ;)
-		return null;
+			return periodicidade.getCriadorDeSessoes().criaSessoes(inicio, fim, horario, this);
 	}
+	
 	
 	public boolean Vagas(int qtd, int min)
    {
