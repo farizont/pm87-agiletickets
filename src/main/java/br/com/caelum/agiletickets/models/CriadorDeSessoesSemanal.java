@@ -20,7 +20,7 @@ public class CriadorDeSessoesSemanal implements CriadorDeSessoes {
 		}
 		
 		int semanas = Weeks.weeksBetween(inicio, fim).getWeeks();
-		for (int i = 0; i < semanas; i++) {
+		for (int i = 0; i <= semanas; i++) {
 			Sessao sessao = new Sessao();
 			sessao.setEspetaculo(espetaculo);
 			
